@@ -15,6 +15,7 @@ class BoundaryAwareMaskLoss(nn.Module):
         self.loss_weight = loss_weight
         self.boundary_weight = boundary_weight 
         self.kernel_size = kernel_size
+        self.use_sigmoid = True
 
     def forward(self, cls_score, label, weight=None, avg_factor=None, reduction_override=None, **kwargs):
         # 1. 极其重要：把真实标签强行扩充为 (N, 1, 28, 28)，与 cls_score 完美对齐
