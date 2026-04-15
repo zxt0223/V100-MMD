@@ -39,7 +39,7 @@ optim_wrapper = dict(
 )
 
 # 120 轮训练策略
-train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=120, val_interval=10)
+train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=120, val_interval=100)
 param_scheduler = [
     dict(type='LinearLR', start_factor=0.001, by_epoch=False, begin=0, end=500),
     dict(type='MultiStepLR', begin=0, end=120, by_epoch=True, milestones=[80, 110], gamma=0.1)
@@ -75,7 +75,7 @@ test_evaluator = val_evaluator
 # 定向保存权重
 default_hooks = dict(
     logger=dict(type='LoggerHook', interval=50),
-    checkpoint=dict(type='CheckpointHook', interval=10, max_keep_ckpts=3, out_dir='/mnt/old_home/chenjinming/MMD1/mmdetection/A-Out/weights/cascade')
+    checkpoint=dict(type='CheckpointHook', interval=100, max_keep_ckpts=3, out_dir='/mnt/old_home/chenjinming/MMD1/mmdetection/A-Out/weights/cascade')
 )
 
 # ================= 核心：挂载 TensorBoard 监控 =================
