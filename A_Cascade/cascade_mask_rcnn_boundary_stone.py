@@ -17,7 +17,7 @@ model = dict(
                 type='BoundaryAwareMaskLoss', 
                 use_mask=True, 
                 loss_weight=1.0, 
-                boundary_weight=3.0, # 尝试 3 倍惩罚，强力撕开粘连
+                boundary_weight=1.0, # 尝试 3 倍惩罚，强力撕开粘连
                 kernel_size=5
             )
             # ===================================================

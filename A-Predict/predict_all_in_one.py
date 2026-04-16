@@ -24,7 +24,7 @@ os.makedirs(vis_out_dir, exist_ok=True)
 os.makedirs(json_out_dir, exist_ok=True)
 
 print("🚀 正在加载模型至 GPU 1...")
-model = init_detector(config_file, checkpoint_file, device='cuda:0')
+model = init_detector(config_file, checkpoint_file, device='cuda:1')
 
 # 召唤官方的绝美可视化器
 visualizer = VISUALIZERS.build(model.cfg.visualizer)

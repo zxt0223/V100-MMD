@@ -7,7 +7,7 @@ sys.path.insert(0, os.getcwd())
 
 # 配置文件和刚出炉的 120 轮权重
 config = 'A_Cascade/cascade_mask_rcnn_stone.py'
-checkpoint = '/mnt/old_home/chenjinming/MMD1/mmdetection/A-Out/weights/cascade/cascade_workdir/epoch_120.pth'
+checkpoint = '/mnt/old_home/chenjinming/MMD1/mmdetection/A-Out/weights/cascade/cascade_workdir/epoch_2.pth'
 
 # 输入输出路径
 img_dir = '/mnt/old_home/chenjinming/Datas/test1'
