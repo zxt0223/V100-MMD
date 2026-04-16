@@ -11,7 +11,7 @@ from mmdet.registry import VISUALIZERS
 
 # ================= 配置区 =================
 config_file = 'A_Cascade/cascade_mask_rcnn_boundary_stone.py'
-checkpoint_file = '/mnt/old_home/chenjinming/MMD1/mmdetection/A-Out/weights/cascade/cascade_boundary_workdir/epoch_2.pth'
+checkpoint_file = '/mnt/old_home/chenjinming/MMD1/mmdetection/A-Out/weights/cascade/cascade_boundary_workdir/epoch_7.pth'
 img_dir = '/mnt/old_home/chenjinming/Datas/test1'
 
 out_dir = 'A-Predict/ultimate_results'
@@ -24,7 +24,7 @@ os.makedirs(vis_out_dir, exist_ok=True)
 os.makedirs(json_out_dir, exist_ok=True)
 
 print("🚀 正在加载模型至 GPU 1...")
-model = init_detector(config_file, checkpoint_file, device='cuda:1')
+model = init_detector(config_file, checkpoint_file, device='cuda:2')
 
 # 召唤官方的绝美可视化器
 visualizer = VISUALIZERS.build(model.cfg.visualizer)
