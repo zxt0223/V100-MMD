@@ -14,11 +14,11 @@ model = dict(
             num_classes=1,
             # ====== 核心替换：换掉普通的 CrossEntropyLoss ======
             loss_mask=dict(
-                type='BoundaryAwareMaskLoss', 
-                use_mask=True, 
-                loss_weight=1.0, 
-                boundary_weight=1.0, # 尝试 3 倍惩罚，强力撕开粘连
-                kernel_size=5
+                type='BoundaryAwareMaskLoss',
+                use_mask=True,
+                loss_weight=1.0,
+                boundary_weight=0.5, # 降低边界惩罚权重，避免过度关注边界导致内部区域学习不足
+                kernel_size=3        # 减小卷积核尺寸，获取更细的边界
             )
             # ===================================================
         )
