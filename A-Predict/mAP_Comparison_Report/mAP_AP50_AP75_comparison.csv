@@ -1,0 +1,4 @@
+﻿Model Name,Weights Evaluated,coco/bbox_mAP,coco/bbox_mAP_50,coco/bbox_mAP_75,coco/segm_mAP,coco/segm_mAP_50,coco/segm_mAP_75
+Scheme1_FeatureCat,epoch_120.pth,0.852,0.948,0.926,0.84,0.948,0.927
+Scheme2_LateFusion,epoch_120.pth,0.848,0.948,0.927,0.838,0.949,0.926
+Baseline_Vanilla_Cascade,epoch_120.pth,0.849,0.949,0.925,0.839,0.95,0.926

@@ -11,7 +11,7 @@ from mmdet.registry import VISUALIZERS
 
 # ================= 配置区 =================
 config_file = 'A_Cascade/cascade_mask_rcnn_boundary_stone.py'
-checkpoint_file = '/mnt/old_home/chenjinming/MMD1/mmdetection/A-Out/weights/cascade/cascade_boundary_workdir/epoch_7.pth'
+checkpoint_file = '/mnt/old_home/chenjinming/MMD1/mmdetection/A-Out/weights/cascade/cascade_boundary_workdir/epoch_120.pth'
 img_dir = '/mnt/old_home/chenjinming/Datas/test1'
 
 out_dir = 'A-Predict/ultimate_results'

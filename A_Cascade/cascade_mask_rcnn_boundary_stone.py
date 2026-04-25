@@ -17,7 +17,7 @@ model = dict(
                 type='BoundaryAwareMaskLoss',
                 use_mask=True,
                 loss_weight=1.0,
-                boundary_weight=0.5, # 降低边界惩罚权重，避免过度关注边界导致内部区域学习不足
+                boundary_weight=0.8, # 降低边界惩罚权重，避免过度关注边界导致内部区域学习不足
                 kernel_size=3        # 减小卷积核尺寸，获取更细的边界
             )
             # ===================================================
@@ -26,7 +26,7 @@ model = dict(
 )
 
 # 独立的工作目录，方便你做消融实验对比
-work_dir = './A-Out/cascade_boundary_workdir'
+work_dir = './A-Out/cascade_ablation_weight_0.8_04月19日-17点00分'
 
 # 再次确保 NMS 和测试数量解除封印
 test_cfg = dict(
